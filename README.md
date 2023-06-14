@@ -5,16 +5,18 @@ Reddit Revive is a Chrome extension designed to allow  users to browse or view R
 
 ## Demo of how it works
 ### With Reddit Archive Redirect
-![Video Demo](https://github.com/jlokos/revive/blob/main/examples/with_extention.gif)
-
+https://github.com/jlokos/reddit-revive/assets/71952027/f35f860f-5e03-4d47-b313-b481a01ed03d
 
 ### Without Reddit Archive Redirect
-![Video Demo](https://github.com/jlokos/Reddit-WayBack-Redirect/blob/main/examples/without_extention.gif)
+https://github.com/jlokos/reddit-revive/assets/71952027/ea1515b3-bf99-4ebe-a29d-71365647b80f
 
 
 ## Installation
 
 ## Installing via Unpacked Extention 
+
+
+
 1. Clone this repository:
     ```
     git clone https://github.com/jlokos/reddit-revive.git
