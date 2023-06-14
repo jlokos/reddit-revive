@@ -13,6 +13,13 @@ https://github.com/jlokos/reddit-revive/assets/71952027/ea1515b3-bf99-4ebe-a29d-
 
 ## Installation
 
+## CRX Release 
+1. [Download Release](https://github.com/jlokos/reddit-revive/releases/download/v1.0/reddit-revive)
+2. Navigate to `chrome://extensions`. Drag and drop.
+3. Enjoy!
+
+## Load Unpacked
+
 1. Clone this repository:
     ```
     git clone https://github.com/jlokos/reddit-revive.git
@@ -20,7 +27,7 @@ https://github.com/jlokos/reddit-revive/assets/71952027/ea1515b3-bf99-4ebe-a29d-
 2. Open Google Chrome, and navigate to `chrome://extensions`.
 3. Make sure that the 'Developer Mode' toggle in the top right corner is checked.
 4. Click 'Load Unpacked' and navigate to the cloned repository. Select the 'extension' directory.
-5. The extension should now be visible in your Chrome extensions list and ready to use.
+5. The extension should now be visible in your Chrome extensions list and ready to use. Enjoy!
 
 ## Usage
 
