@@ -1,15 +1,14 @@
-![sadreddit](https://github.com/jlokos/reddit-revive/assets/71952027/14113a4c-539d-484e-9ce3-cfb2c6fdc4fb)
+![sadreddit](https://github.com/jlokos/reddit-revive/assets/71952027/be5650cd-9ef4-4999-98cf-f6818e196cfe)
 # Reddit Revive
 
 Reddit Revive is a Chrome extension designed to allow  users to browse or view Reddit. Leveraging the potent Wayback Machine API from the Internet Archive, this extension enables users to easily access previously archived Reddit.
 
 ## Demo of how it works
 ### With Reddit Archive Redirect
-https://github.com/jlokos/reddit-revive/assets/71952027/f35f860f-5e03-4d47-b313-b481a01ed03d
+https://github.com/jlokos/reddit-revive/assets/71952027/177301df-c09a-4c84-b225-865928b53466
 
 ### Without Reddit Archive Redirect
-https://github.com/jlokos/reddit-revive/assets/71952027/ea1515b3-bf99-4ebe-a29d-71365647b80f
-
+https://github.com/jlokos/reddit-revive/assets/71952027/5eb455ea-e7b5-4084-aa68-a2f293b4459f
 
 ## Installation
 
