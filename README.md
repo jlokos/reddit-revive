@@ -1,4 +1,4 @@
-
+![sadreddit](https://github.com/jlokos/reddit-revive/assets/71952027/14113a4c-539d-484e-9ce3-cfb2c6fdc4fb)
 # Reddit Revive
 
 Reddit Revive is a Chrome extension designed to allow  users to browse or view Reddit. Leveraging the potent Wayback Machine API from the Internet Archive, this extension enables users to easily access previously archived Reddit.
@@ -13,10 +13,6 @@ https://github.com/jlokos/reddit-revive/assets/71952027/ea1515b3-bf99-4ebe-a29d-
 
 ## Installation
 
-## Installing via Unpacked Extention 
-
-
-
 1. Clone this repository:
     ```
     git clone https://github.com/jlokos/reddit-revive.git
@@ -26,15 +22,9 @@ https://github.com/jlokos/reddit-revive/assets/71952027/ea1515b3-bf99-4ebe-a29d-
 4. Click 'Load Unpacked' and navigate to the cloned repository. Select the 'extension' directory.
 5. The extension should now be visible in your Chrome extensions list and ready to use.
 
-
-## Installing via CRX
-1. Simply download the latest .crx from the releases and drag and drop into `chrome://extensions`.
-
-
 ## Usage
 
 1. Click or Navigate to a Reddit link (yes that simple).
-
 
 ## Contributing
 
