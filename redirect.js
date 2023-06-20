@@ -1,19 +1,23 @@
 // redirect.js
-window.onload = function() {
-        let urlParams = new URLSearchParams(window.location.search);
-        let redirectUrl = urlParams.get('redirectUrl');
-        fetch(`https://archive.org/wayback/available?url=${redirectUrl}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.archived_snapshots && data.archived_snapshots.closest !== undefined && data.archived_snapshots.closest.available) {
-                window.location.href = data.archived_snapshots.closest.url;
-            } else {
-                document.body.innerHTML = `
+window.onload = function () {
+  let urlParams = new URLSearchParams(window.location.search);
+  let redirectUrl = urlParams.get("redirectUrl");
+  fetch(`https://archive.org/wayback/available?url=${redirectUrl}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (
+        data.archived_snapshots &&
+        data.archived_snapshots.closest !== undefined &&
+        data.archived_snapshots.closest.available
+      ) {
+        window.location.href = data.archived_snapshots.closest.url;
+      } else {
+        document.body.innerHTML = `
                 <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
                 <!-- sad reddit svg -->
                 <svg
@@ -54,14 +58,40 @@ window.onload = function() {
                                 c3.8,5.9,11.6,7.5,17.3,3.5c23-15.7,51.8-23.5,80.6-23.5c17.1,0,34.1,2.8,50,8.3C460.9,548.1,471.2,553.2,480.6,559.6z"
                       />
                     </svg>
-                        <p style="color: #fff; font-size: 20px;" >No archives available</p>
-                        </div>
-                `;
-            }
-        })
-        .catch(e => {
-            console.log('There has been a problem with your fetch operation: ' + e.message);
-            window.location.href = redirectUrl; // Redirect to the original URL in case of fetch error
-        });
-    };
-    
+                    <p style="color: #fff; font-size: 20px;" >No archives available</p>
+                    <button id="copyClipboard" style="color: ; font-size: 16px; margin: 12px">Copy original URL to clipboard</button>
+                    <button id="openIncognito" style="color: ; font-size: 16px; margin: 12px">Open original link in incognito window</button>
+            </div>
+            `;
+        document
+          .getElementById("openIncognito")
+          .addEventListener("click", function () {
+            chrome.windows.create({ url: redirectUrl, incognito: true });
+          });
+        document
+          .getElementById("copyClipboard")
+          .addEventListener("click", function () {
+            navigator.clipboard.writeText(redirectUrl).then(
+              function () {
+                /* clipboard successfully set */
+                // change the text of the button with id="copyClipboard" to "Copied to clipboard!"
+                document.getElementById("copyClipboard").innerText =
+                  "Copied to clipboard!";
+              },
+              function () {
+                /* clipboard write failed */
+                // change the text of the button to "Failed to copy to clipboard"
+                document.getElementById("copyClipboard").innerText =
+                  "Failed to copy to clipboard";
+              }
+            );
+          });
+      }
+    })
+    .catch((e) => {
+      console.log(
+        "There has been a problem with your fetch operation: " + e.message
+      );
+      window.location.href = redirectUrl; // Redirect to the original URL in case of fetch error
+    });
+};
